@@ -3,18 +3,23 @@ import RoboPiLib as RPL
 RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
 # Move forward
-while RPL.digitalRead(17) == 1:
-    RPL.servoWrite(1,1000)
-    RPL.servoWrite(2,2000)
-    if RPL.digitalRead(17) == 0:
-        break
+def forward():
+    while RPL.digitalRead(17) == 1:
+        RPL.servoWrite(1,1000)
+        RPL.servoWrite(2,2000)
+        if RPL.digitalRead(17) == 0:
+            sokomade()
+
 
 # Stop moving
-while RPL.digitalRead(17) == 0:
-    RPL.servoWrite(1,0)
-    RPL.servoWrite(2,0)
-    if RPL.digitalRead(17) == 1:
-        break
+def sokomade():
+    while RPL.digitalRead(17) == 0:
+        RPL.servoWrite(1,0)
+        RPL.servoWrite(2,0)
+        if RPL.digitalRead(17) == 1:
+            forward()
+
+forward()
 
 """
 
