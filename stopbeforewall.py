@@ -6,15 +6,15 @@ RPL.RoboPiInit("/dev/ttyAMA0",115200)
 while RPL.digitalRead(17) == 1:
     RPL.servoWrite(1,1000)
     RPL.servoWrite(2,2000)
-else:
-    break
+    if RPL.digitalRead(17) == 0:
+        break
 
 # Stop moving
 while RPL.digitalRead(17) == 0:
     RPL.servoWrite(1,0)
     RPL.servoWrite(2,0)
-else:
-    break
+    if RPL.digitalRead(17) == 1:
+        break
 
 """
 
