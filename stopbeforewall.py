@@ -10,7 +10,7 @@ RPL.servoWrite(2,2000)
 if RPL.digitalRead(17) == 0:
     RPL.servoWrite(1,0)
     RPL.servoWrite(2,0)
-
+    
 """
 
 ssh student@192.168.21.121
