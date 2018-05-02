@@ -7,6 +7,12 @@ RPL.servoWrite(1,1000)
 RPL.servoWrite(2,2000)
 
 # Stop moving
-if RPL.digitalRead(16) == 0:
+if RPL.digitalRead(15) == 0:
     RPL.servoWrite(1,0)
     RPL.servoWrite(2,0)
+
+"""
+
+ssh student@192.168.21.121
+
+"""

@@ -101,6 +101,7 @@ RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
 #Sensor
 RPL.digitalRead()
+# The arg depends on which port the wire's in
 
 # Move forward
 RPL.servoWrite(0,1000)
