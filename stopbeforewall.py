@@ -7,7 +7,7 @@ RPL.servoWrite(1,1000)
 RPL.servoWrite(2,2000)
 
 # Stop moving
-if RPL.digitalRead(15) == 1:
+if RPL.digitalRead(17) == 0:
     RPL.servoWrite(1,0)
     RPL.servoWrite(2,0)
 
