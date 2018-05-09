@@ -12,6 +12,8 @@ def runner():
         RPL.servoWrite(2,0)
         threading.Timer(3.0, runner).start()
 
+runner()
+
 """
 
 ssh student@192.168.21.121
