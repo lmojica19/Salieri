@@ -10,6 +10,7 @@ def runner():
         RPL.servoWrite(0,0)
         RPL.servoWrite(1,0)
         RPL.servoWrite(2,0)
+        threading.Timer(5.0, printit).start()
         runner()
 
 runner()
