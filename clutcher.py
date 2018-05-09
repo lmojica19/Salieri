@@ -13,3 +13,11 @@ def runner():
         runner()
 
 runner()
+
+"""
+
+ssh student@192.168.21.121
+
+ctrl c to cease
+
+"""
