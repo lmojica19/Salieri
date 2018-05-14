@@ -13,11 +13,9 @@ def forward():
 
 # Stop moving
 def sokomade():
-    while RPL.digitalRead(17) == 0:
-        RPL.servoWrite(1,2000)
-        RPL.servoWrite(2,2000)
-        threading.Timer(3, forward).start()
-        break
+    RPL.servoWrite(1,2000)
+    RPL.servoWrite(2,2000)
+    threading.Timer(3, forward).start()
 
 forward()
 
