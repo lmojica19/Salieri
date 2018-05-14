@@ -17,6 +17,7 @@ def sokomade():
         RPL.servoWrite(1,2000)
         RPL.servoWrite(2,2000)
         threading.Timer(3, forward).start()
+        break
 
 forward()
 
