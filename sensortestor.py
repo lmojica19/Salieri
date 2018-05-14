@@ -1,7 +1,7 @@
 import RoboPiLib as RPL
 RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
-RPL.digitalRead(17)
+print RPL.digitalRead(17)
 
 """
 
