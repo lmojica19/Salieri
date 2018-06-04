@@ -1,4 +1,6 @@
 import threading
+import RoboPiLib as RPL
+RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
 def susume():
     print "Susume!"
